@@ -1,4 +1,4 @@
-## 200. [Two Sums](https://leetcode.com/problems/two-sum/)
+## 1. [Two Sums](https://leetcode.com/problems/two-sum/)
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
