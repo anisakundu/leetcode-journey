@@ -4,7 +4,7 @@
 |-------- | -------- | -------------- |
 | O(n) | O(n) | Graph |
 
-```java8
+```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
