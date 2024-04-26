@@ -2,7 +2,7 @@
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-| O(n) | O(n) | Graph |
+| O(n) | O(n) | Array, HashTable |
 
 ```java
 class Solution {
