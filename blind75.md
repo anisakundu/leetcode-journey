@@ -18,3 +18,12 @@ class Solution {
     }
 }
 ```
+
+<details>
+<summary>Improvements/Notes</summary>
+<br>
+- could be helpful to sort the input array first and then find the indices. this would work if we had a lot of different targets but the same input array everytime.
+- could use brute force if memory is a problem (not necessarily iterating through the array twice, but maybe using the contains method). 
+- this is pretty hard to understand just from the code. could add descriptive comments or code ?
+    
+</details>
