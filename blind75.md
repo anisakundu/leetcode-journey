@@ -159,7 +159,10 @@ class Solution {
 <summary>Improvements/Notes</summary>
 <br>
 Improvements
-    - need to watch video on this
+    - need to watch video on this: [Max Contiguous Subarray Sum - Cubic Time To Kadane's Algorithm ("Maximum Subarray" on LeetCode)](https://www.youtube.com/watch?v=2MmGzdiKR9Y&pp=ygUqbWF4aW11bSBzdWJhcnJheSBsZWV0Y29kZSBiYWNrIHRvIGJhY2sgc3dl)
+        - you're dealing with DP when you need to break up a problem into the same type of subproblems (so that you don't repeat your work - you can think about the idea that if you can use recursion to solve this problem, you can use DP) ?? very shaky on this explanation
+        - strong takeaway: in this problem, you can identify the subproblem that gets repeated - you need to find the contiguous subarray with max sum in every array in your problem. if your original array had 8 elements, you need to find this max sum contiguous subarray for subarray[0:0], subarray[0:1], subarray[0:2], subarray[0:3]... subarray[0:8]. you only add on the previous sub array max sum to your new subarray sum if its non negative (has to make your current sum bigger.
+        - strong takeaway: both in this explanation and in the other explanations, it seems important to start with the most inefficient solution in interviews and work your way up to the efficient solution. maybe you don't code each solution. you just explain it. 
     - what would you do if they needed you to actually return the array? hashmap? between each sum and the array it's made up of.
 </details>
 
