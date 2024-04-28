@@ -28,7 +28,7 @@ class Solution {
     
 </details>
 
-## 2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+## 2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
 | O(n) | O(n) | Array, Dynamic Programming |
