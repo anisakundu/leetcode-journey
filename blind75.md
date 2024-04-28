@@ -22,6 +22,10 @@ class Solution {
 <details>
 <summary>Improvements/Notes</summary>
 <br>
+Video
+- [video explanation](https://www.youtube.com/watch?v=BoHO04xVeU0)
+
+Improvements
 - could be helpful to sort the input array first and then find the indices. this would work if we had a lot of different targets but the same input array everytime.
 - could use brute force if memory is a problem (not necessarily iterating through the array twice, but maybe using the contains method). 
 - this is pretty hard to understand just from the code. could add descriptive comments or code ?
@@ -34,7 +38,7 @@ class Solution {
 ## 2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-| O(n) | O(n) | Array, Dynamic Programming |
+| O(n) | O(n) | Array, Dynamic Programming, Two Pointer |
 
 ```java
 class Solution {
@@ -56,6 +60,8 @@ class Solution {
 <details>
 <summary>Improvements/Notes</summary>
 <br>
+[Video Explanation](https://www.youtube.com/watch?v=1pkOgXD63yU)
+
 Background 
     - you need to find the lowest number and the highest number in the array such that the lowest number is to the left of the highest number.
     - this is a specific target, you don't need to iterate through the array twice
@@ -141,6 +147,7 @@ Improvements
     - if you could remove the zero from your input set, you could likely just find the product once and then divide by each nums[i] - this would make the runtime O(2n) instead of O(3n)
     04/28/24
     - i don't think this is dp because there's exactly one solution, you don't have to compute multiple potential solutions and compare them. 
+    - i would not classify this as 2 pointer problem, because the pointers always point to the same 2 indices (one before, and one after). in a 2 pointer problem, I'm assuming the pointers should move based on the comparison between various potential solutions. 
 </details>
 
 ## 5. [Maximum SubArray](https://leetcode.com/problems/maximum-subarray/)
@@ -172,6 +179,9 @@ Improvements
         - strong takeaway: both in this explanation and in the other explanations, it seems important to start with the most inefficient solution in interviews and work your way up to the efficient solution. maybe you don't code each solution. you just explain it. 
         - array problems usually should have an O(n) solution. look for it.
     - what would you do if they needed you to actually return the array? hashmap? between each sum and the array it's made up of.
+
+Notes
+    - this would be a 2 pointer solution i think if we had to keep track of the arrays. 
 </details>
 
 <details>
