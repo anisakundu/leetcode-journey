@@ -136,10 +136,47 @@ Improvements
     - if you could remove the zero from your input set, you could likely just find the product once and then divide by each nums[i] - this would make the runtime O(2n) instead of O(3n)
 </details>
 
-## 4. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+## 5. [Maximum SubArray](https://leetcode.com/problems/maximum-subarray/)
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-| O(n) | O(n) | Array, Prefix Sum |
+| O(n) | O(n) | Array, Divide&Conquer, Dynamic Programming |
+```java
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int currSum = nums[0];
+        int maxSum = nums[0];
 
+        for (int i = 1; i < nums.length; i++){
+            currSum = Math.max(nums[i], nums[i] + currSum);
+            maxSum = Math.max(maxSum, currSum);
+        }
+        
+        return maxSum;
+    }
+}
+```
+<details>
+<summary>Improvements/Notes</summary>
+<br>
+Improvements
+    - need to watch video on this
+    - what would you do if they needed you to actually return the array? hashmap? between each sum and the array it's made up of.
+</details>
+
+<details>
+<summary>Overall Journey/Questions</summary>
+<br>
+    04/28
+    - writing this at paris baguette, after doing leetcode for 30 min, feeling exhausted from realizing how much there is I don't know, and realizing I definitely could benefit from not napping every time this happens. (it takes so long to nap and then disengage and re engage with this when i'm feeling better. I'd rather push the tiredness away directly right now)
+- how do i know i'll be able to identify questions like this? and identify when to use this solution? i haven't really come across a repeat solution yet. 
+- right now, i'm not afraid of doing too much, like having to do 500 leetcode problems instead of 75 - but eventually I'll start becoming afraid of this. Because it'll seem like there's no end. I think I kind of have to commit to doing both: continuing pursuing the path I chose (like doing a list of 75 problems), and entertaining these opportunities to see if i could be learning this faster (like dedicating additional time to watch videos on the patterns behind these problems). And I still promised myself I'd take a mock interview by the time I'm done with those 75 problems. I don't want to delay getting those problems done because I'm watching tangential videos. I should set a hard deadline for getting through these interviews. 
+    - it's taking me approximately 30 min / problem right now (just to categorize, try out a solution, and go back understand how to implement the correct solution. not very able to find patterns within these 30 min). i can handle probably 5 per day if I'm diligent, I'm accomplishing maybe 2-3 on a a daily basis though. If I do 5 per day, it should take 2 weeks. I will aim for booking an interview the week of May 13-17.
+    - that being said, I found these videos / articles I want to watch / read to understand more about the patterns before I take the mock interview but maybe not before I'm done with these problems. maybe I can understand patterns for one day after each leet code category. (or perhaps before would also work).
+
+    Array
+     - dp intro: https://www.google.com/search?sca_esv=1d62dda5da21c497&sca_upv=1&sxsrf=ACQVn0_Tp_RrN9n6IveIB4RNM0qIVXkyXg:1714331329032&q=best+introduction+to+dynamic+programming&tbm=vid&source=lnms&prmd=vsibnmt&sa=X&ved=2ahUKEwj_sZPvzeWFAxXMODQIHXoCDHQQ0pQJegQICxAB&biw=1440&bih=813&dpr=1#fpstate=ive&vld=cid:baadfd58,vid:Clp5c7HvLqs,st:0
+     - patterns: https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+     - really long course on patterns (?) https://www.educative.io/courses/grokking-coding-interview-patterns-java
+</details>
 
 
