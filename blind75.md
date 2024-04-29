@@ -184,6 +184,57 @@ Notes
     - this would be a 2 pointer solution i think if we had to keep track of the arrays. 
 </details>
 
+## 6. [Maximum Product SubArray](https://leetcode.com/problems/maximum-product-subarray/description/)
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n) | O(n) | Array, Dynamic Programming, Divide & Conquer|
+```java
+class Solution {
+    public int maxProduct(int[] nums) {
+        int maxProduct = Integer.MIN_VALUE;
+        int prod = 1;
+        int firstNegIndex = -1;
+
+        for (int i = 0; i < nums.length; i++){
+            if (nums[i] < 0 && firstNegIndex == -1){
+                firstNegIndex = i;
+            }
+            prod *= nums[i];
+            maxProduct=Math.max(prod,maxProduct);
+            if (prod == 0){
+                prod = 1;
+            }
+        }
+
+        prod = 1;
+        if (firstNegIndex > -1){
+            for (int j = nums.length - 1; j >= firstNegIndex; j--){
+                prod *= nums[j];
+                maxProduct=Math.max(prod,maxProduct);
+                if (prod == 0){
+                    prod = 1;
+                }
+            }
+        }
+        
+        return maxProduct;
+    }
+}
+```
+<details>
+<summary>Improvements/Notes</summary>
+<br>
+Notes
+    // categories: array, dp
+// subproblem: finding the largest product in each subarray, and seeing if it enhances / increases the product in the next largest subarray
+
+// why their backwards forwards iterating solution works
+// all the numbers in the array are whole integers. by default the absolute value of your product will alwasy be growing larger the more numbers you multiply it by, so long as that number is not 0. if it's 0, break the subarray and reset overall product to 1.
+// so that leaves only 1 factor whether the value is positive or negative at the end. and that depends on how you're grouping the integers: left to right or right to left. if there are an odd number of negatives, there are only 2 ways to group, leaving the left most negative out (and everything before it) or leaving the right most negative out (and everything after it)
+Improvements
+    - I added the part of checking only until the firstNeg instead of the whole array, not a big change - but technically more correct. wonder if it affects efficiency or readability. this one just logically makes sense to me. 
+<details></details>
+
 <details>
 <summary>Overall Journey/Questions</summary>
 <br>
