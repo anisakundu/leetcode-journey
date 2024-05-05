@@ -235,6 +235,14 @@ Improvements
     - I added the part of checking only until the firstNeg instead of the whole array, not a big change - but technically more correct. wonder if it affects efficiency or readability. this one just logically makes sense to me. 
 <details></details>
 
+## 6. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n) | O(n) | Array, Dynamic Programming, Divide & Conquer|
+```java
+
+```
+
 <details>
 <summary>Overall Journey/Questions</summary>
 <br>
